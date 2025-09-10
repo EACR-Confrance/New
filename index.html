@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أخبار - روابط خارجية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+            max-width: 900px;
+        }
+        
+        .logo-container {
+            margin-bottom: 25px;
+        }
+        
+        .circular-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0d6efd;
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            color: #0d6efd;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #6c757d;
+        }
+        
+        .news-ticker {
+            background: #e9f2ff;
+            border: 1px solid #cfe2ff;
+            border-radius: 8px;
+            padding: 12px 20px;
+            margin: 30px 0;
+            display: flex;
+            align-items: center;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .news-ticker span {
+            background: #0d6efd;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-left: 15px;
+        }
+        
+        .news-ticker p {
+            margin: 0;
+            font-size: 1rem;
+            color: #0a58ca;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-header {
+            padding: 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            height: 180px;
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #0d6efd;
+            font-weight: 700;
+        }
+        
+        .card-desc {
+            color: #6c757d;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-size: 1rem;
+            flex-grow: 1;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            background: #0d6efd;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+        
+        .btn:hover {
+            background: #0b5ed7;
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+        }
+        
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9rem;
+            width: 100%;
+            padding: 20px;
+            border-top: 1px solid #dee2e6;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .news-ticker {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .news-ticker span {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+        }
+        
+        .breaking-news {
+            border: 2px solid #0d6efd;
+        }
+        
+        .date-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: rgba(13, 110, 253, 0.9);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo-container">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="شعار الموقع" class="circular-logo">
+        </div>
+        <h1>أخبار المؤتمر</h1>
+        <p class="subtitle">تابع آخر الأخبار عن المؤتمر</p>
+        
+      
+    </div>
+    
+    <div class="container">
+        <div class="card breaking-news">
+            <div class="card-header">
+                <div class="date-badge"></div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">الزكاء الإصطناعي</h3>
+                <p class="card-desc">كيف يخدم الزكاء الإصطناعي التشخيص والعلاج والتنبؤ بالسرطان</p>
+                <a href="https://gate.ahram.org.eg/News/5283233.aspx" target="_blank" class="btn">
+                    <span>إضغط لمشاهده الخبر</span>
+                </a>
+            </div>
+        </div>
+        <div class="container">
+        <div class="card breaking-news">
+            <div class="card-header">
+                <div class="date-badge"></div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">تبادل الخبرات</h3>
+                <p class="card-desc">في المؤتمر الدولي السنوي للجمعيه المصريه لأبحاث السرطان |تبادل الخبرات بين بين شباب الباحثين والأثاتذه </p>
+                <a href="https://investor24.net/2025/09/10/%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%a7%d9%84%d8%af%d9%88%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d9%86%d9%88%d9%8a-%d9%84%d9%84%d8%ac%d9%85%d8%b9%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b5/" target="_blank" class="btn">
+                    <span>إضغط لمشاهده الخبر</span>
+                </a>
+            </div>
+        </div>
+      
+      <div class="container">
+        <div class="card breaking-news">
+            <div class="card-header">
+                <div class="date-badge"></div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">الذكاء الإصطناعي</h3>
+                <p class="card-desc">كيف يساعد الذكاء الاصطناعي والتغير المناخي في أبحاث السرطان؟</p>
+                <a href="https://daralmaref.com/News/2339798.aspx" target="_blank" class="btn">
+                    <span>إضغط لمشاهده الخبر</span>
+                </a>
+            </div>
+        </div>
+          
+      
+      
+      <div class="container">
+        <div class="card breaking-news">
+            <div class="card-header">
+                <div class="date-badge"></div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">في المؤتمر |صور</h3>
+                <p class="card-desc">
+
+في المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان.. تبادل الخبرات بين شباب الباحثين والأساتذة| صور
+
+</p>
+                <a href="https://investor24.net/2025/09/10/%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%a7%d9%84%d8%af%d9%88%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d9%86%d9%88%d9%8a-%d9%84%d9%84%d8%ac%d9%85%d8%b9%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b5/" target="_blank" class="btn">
+                    <span>إضغط لمشاهده الخبر</span>
+                </a>
+            </div>
+        </div>
+        
+        
+     <div class="container">
+        <div class="card breaking-news">
+            <div class="card-header">
+                <div class="date-badge"></div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">إنعقاد المؤتمر</h3>
+                <p class="card-desc">
+انعقاد المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان بالتعاون مع "مدينة الأبحاث العلمية".. 8 سبتمبر</p>
+                <a href="https://gate.ahram.org.eg/News/5272337.aspx" target="_blank" class="btn">
+                    <span>إضغط لمشاهده الخبر</span>
+                </a>
+            </div>
+        </div>
+           
+        
+    <script>
+        // تأثير الكتابة للعنوان الرئيسي
+        const title = document.querySelector('h1');
+        const originalText = title.textContent;
+        title.textContent = '';
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < originalText.length) {
+                title.textContent += originalText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        
+        setTimeout(typeWriter, 500);
+    </script>
+</body>
+</html>
