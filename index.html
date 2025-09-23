@@ -3,9 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أخبار المؤتمر</title>
+    <title>أخبار المؤتمر الدولي للجمعية المصرية لأبحاث السرطان 2025</title>
+    <meta name="description" content="تابع آخر أخبار وتحديثات المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان المنعقد في 8 سبتمبر 2025. اكتشف أحدث الأبحاث حول الذكاء الاصطناعي وعلاج السرطان.">
+    <meta name="keywords" content="المؤتمر الدولي, أبحاث السرطان, الجمعية المصرية, الذكاء الاصطناعي, علاج السرطان, 8 سبتمبر 2025, أخبار طبية">
+    <meta name="author" content="الجمعية المصرية لأبحاث السرطان">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="أخبار المؤتمر الدولي للجمعية المصرية لأبحاث السرطان 2025">
+    <meta property="og:description" content="تابع آخر أخبار وتحديثات المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان">
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="أخبار المؤتمر الدولي للجمعية المصرية لأبحاث السرطان 2025">
+    <meta name="twitter:description" content="تابع آخر أخبار وتحديثات المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان">
+    <meta name="twitter:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg">
+    
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان",
+      "startDate": "2025-09-08",
+      "endDate": "2025-09-10",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "مدينة الأبحاث العلمية",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "مصر"
+        }
+      },
+      "description": "المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان بالتعاون مع مدينة الأبحاث العلمية",
+      "organizer": {
+        "@type": "Organization",
+        "name": "الجمعية المصرية لأبحاث السرطان"
+      }
+    }
+    </script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --primary-color: #0d6efd;
+            --primary-dark: #0a58ca;
+            --primary-light: #e9f2ff;
+            --secondary-color: #6f42c1;
+            --accent-color: #20c997;
+            --text-dark: #333;
+            --text-muted: #6c757d;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --border-color: #dee2e6;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --transition: all 0.3s ease;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -14,13 +75,91 @@
         }
         
         body {
-            background-color: #f8f9fa;
-            color: #333;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 20px;
+            padding: 0;
+            line-height: 1.7;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        body.loaded {
+            opacity: 1;
+        }
+        
+        /* شاشة التحميل */
+        .loader-wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s;
+        }
+        
+        .loader-wrapper.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            position: relative;
+        }
+        
+        .loader:before, .loader:after {
+            content: '';
+            position: absolute;
+            border: 4px solid var(--primary-color);
+            opacity: 1;
+            border-radius: 50%;
+            animation: pulse 1.5s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        
+        .loader:after {
+            animation-delay: -0.75s;
+        }
+        
+        @keyframes pulse {
+            0% {
+                top: 30px;
+                left: 30px;
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                top: 0;
+                left: 0;
+                width: 60px;
+                height: 60px;
+                opacity: 0;
+            }
+        }
+        
+        /* الشريط العلوي */
+        .top-bar {
+            background: var(--gradient);
+            width: 100%;
+            padding: 12px 0;
+            color: white;
+            text-align: center;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideDown 0.5s ease;
         }
         
         .header {
@@ -28,87 +167,175 @@
             margin-bottom: 40px;
             width: 100%;
             max-width: 900px;
+            padding: 40px 20px 20px;
+            background: var(--white);
+            border-radius: 0 0 20px 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .header.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
         }
         
         .logo-container {
             margin-bottom: 25px;
+            position: relative;
         }
         
         .circular-logo {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #0d6efd;
-            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+            border: 4px solid var(--primary-color);
+            box-shadow: 0 6px 18px rgba(13, 110, 253, 0.25);
+            transition: var(--transition);
+        }
+        
+        .circular-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(13, 110, 253, 0.4);
         }
         
         h1 {
             font-size: 2.8rem;
             margin-bottom: 15px;
-            color: #0d6efd;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-weight: 800;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
         }
         
         .subtitle {
             font-size: 1.2rem;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 25px auto 15px;
             line-height: 1.6;
-            color: #6c757d;
+            color: var(--text-muted);
+        }
+        
+        .date-display {
+            background: var(--primary-light);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(13, 110, 253, 0.1);
         }
         
         .news-ticker {
-            background: #e9f2ff;
+            background: var(--primary-light);
             border: 1px solid #cfe2ff;
-            border-radius: 8px;
-            padding: 12px 20px;
+            border-radius: 12px;
+            padding: 15px 25px;
             margin: 30px 0;
             display: flex;
             align-items: center;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .news-ticker::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-color);
         }
         
         .news-ticker span {
-            background: #0d6efd;
+            background: var(--primary-color);
             color: white;
-            padding: 4px 12px;
+            padding: 6px 15px;
             border-radius: 20px;
             font-size: 0.9rem;
             margin-left: 15px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+        
+        .news-ticker span i {
+            margin-left: 5px;
         }
         
         .news-ticker p {
             margin: 0;
             font-size: 1rem;
-            color: #0a58ca;
+            color: var(--primary-dark);
+            font-weight: 500;
         }
         
         .container {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1200px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+            margin: 20px 0 40px;
+            padding: 0 20px;
         }
         
         .card {
-            background: white;
-            border-radius: 12px;
+            background: var(--white);
+            border-radius: 16px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #dee2e6;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
             display: flex;
             flex-direction: column;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease;
+        }
+        
+        .card.animate {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
         }
         
         .card-header {
@@ -116,13 +343,18 @@
             text-align: center;
             position: relative;
             overflow: hidden;
-            height: 180px;
+            height: 200px;
         }
         
         .card-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .card:hover .card-image {
+            transform: scale(1.05);
         }
         
         .card-body {
@@ -135,12 +367,13 @@
         .card-title {
             font-size: 1.4rem;
             margin-bottom: 15px;
-            color: #0d6efd;
+            color: var(--primary-color);
             font-weight: 700;
+            line-height: 1.4;
         }
         
         .card-desc {
-            color: #6c757d;
+            color: var(--text-muted);
             margin-bottom: 25px;
             line-height: 1.6;
             font-size: 1rem;
@@ -151,59 +384,44 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 12px;
-            background: #0d6efd;
+            padding: 12px 20px;
+            background: var(--primary-color);
             color: white;
             text-align: center;
-            border-radius: 8px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: var(--transition);
             border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
         }
         
         .btn:hover {
-            background: #0b5ed7;
-            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+            background: var(--primary-dark);
+            box-shadow: 0 6px 15px rgba(13, 110, 253, 0.3);
+            transform: translateY(-2px);
         }
         
-        .footer {
-            margin-top: 60px;
-            text-align: center;
-            color: #6c757d;
-            font-size: 0.9rem;
-            width: 100%;
-            padding: 20px;
-            border-top: 1px solid #dee2e6;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .subtitle {
-                font-size: 1rem;
-            }
-            
-            .news-ticker {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .news-ticker span {
-                margin-left: 0;
-                margin-bottom: 10px;
-            }
-        }
-        
-        .breaking-news {
-            border: 2px solid #0d6efd;
+        .btn i {
+            margin-right: 8px;
         }
         
         .date-badge {
@@ -212,153 +430,503 @@
             left: 15px;
             background: rgba(13, 110, 253, 0.9);
             color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
+            padding: 6px 12px;
+            border-radius: 8px;
             font-size: 0.8rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .breaking-news {
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        .breaking-news .date-badge {
+            background: var(--accent-color);
+        }
+        
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            width: 100%;
+            padding: 30px 20px;
+            border-top: 1px solid var(--border-color);
+            background: var(--white);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .footer.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+            transition: var(--transition);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+        }
+        
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 0 auto 20px;
+            padding: 10px 20px;
+            width: 100%;
+            direction: rtl;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .breadcrumb.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .breadcrumb a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 992px) {
+            .container {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.05rem;
+            }
+            
+            .news-ticker {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+            
+            .news-ticker span {
+                margin-left: 0;
+                margin-bottom: 10px;
+            }
+            
+            .card-header {
+                height: 180px;
+            }
+            
+            .header {
+                padding: 30px 15px 15px;
+            }
+            
+            .breadcrumb {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* تأثيرات للبطاقات المختلفة */
+        .card:nth-child(2n) {
+            border-top: 4px solid var(--secondary-color);
+        }
+        
+        .card:nth-child(3n) {
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        /* شريط التقدم للصفحة */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 1001;
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: var(--gradient);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        /* تأثيرات للصور عند التحميل */
+        .card-image {
+            filter: brightness(0.9);
+            transition: filter 0.5s ease;
+        }
+        
+        .card-image.loaded {
+            filter: brightness(1);
+        }
+        
+        /* تحسينات للوصول وإمكانية الاستخدام */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 10000;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* تحسينات للطباعة */
+        @media print {
+            .back-to-top, .progress-container, .news-ticker span {
+                display: none !important;
+            }
+            
+            .card {
+                break-inside: avoid;
+            }
+            
+            body {
+                background: white;
+                color: black;
+            }
+            
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .btn {
+                background: white;
+                color: black;
+                border: 1px solid #ddd;
+            }
+        }
+        
+        /* أنيميشن لشريط الأخبار العاجلة */
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        
+        .news-ticker p {
+            white-space: nowrap;
+            animation: ticker 20s linear infinite;
+        }
+        
+        /* تأثيرات دخول العناصر */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
+    <!-- شاشة التحميل -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- رابط تخطي التنقل للمستخدمين ذوي الإعاقة -->
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+    
+    <!-- شريط التقدم -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
+    <!-- زر العودة للأعلى -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <div class="top-bar">
+        المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان - 8 سبتمبر 2025
+    </div>
+    
+    <!-- مسار التنقل (Breadcrumb) -->
+    <div class="breadcrumb" id="breadcrumb">
+        <a href="#">الرئيسية</a> / 
+        <a href="#date-badge">المؤتمرات</a> / 
+        <a href="#">أخبار المؤتمر</a>
+    </div>
+    
+    <div class="header" id="header">
         <div class="logo-container">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="شعار الموقع" class="circular-logo">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="شعار المؤتمر الدولي للجمعية المصرية لأبحاث السرطان" class="circular-logo">
         </div>
         <h1>أخبار المؤتمر</h1>
-        <p class="subtitle">تابع آخر الأخبار عن المؤتمر</p>
+        <p class="subtitle">تابع آخر الأخبار والتحديثات عن المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان</p>
         
-      
+        <div class="date-display">
+            <i class="fas fa-calendar-alt"></i>
+            <span>8 سبتمبر 2025</span>
+        </div>
+        
+        <div class="news-ticker">
+            <span><i class="fas fa-bolt"></i> عاجل</span>
+            <p>انعقاد المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان بالتعاون مع "مدينة الأبحاث العلمية"</p>
+        </div>
     </div>
-    <div class="container">
-        <div class="card breaking-news">
+    
+    <main id="main-content" class="container">
+        <!-- الخبر الأول -->
+        <article class="card breaking-news">
             <div class="card-header">
-                <div class="date-badge"></div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
+                <div class="date-badge">8 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="الذكاء الاصطناعي وأبحاث السرطان" class="card-image">
             </div>
             <div class="card-body">
-                <h3 class="card-title">الزكاء الإصطناعي</h3>
-                <p class="card-desc">كيف يخدم الزكاء الإصطناعي التشخيص والعلاج والتنبؤ بالسرطان</p>
-                <a href="https://gate.ahram.org.eg/News/5283233.aspx" target="_blank" class="btn">
-                    <span>إضغط لمشاهده الخبر</span>
+                <h2 class="card-title">الذكاء الاصطناعي في مواجهة السرطان</h2>
+                <p class="card-desc">كيف يخدم الذكاء الاصطناعي التشخيص والعلاج والتنبؤ بالسرطان؟ اكتشف أحدث التطورات في هذا المجال الثوري.</p>
+                <a href="https://gate.ahram.org.eg/News/5283233.aspx" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
                 </a>
             </div>
-    <div class="container">
-        <div class="card breaking-news">
-            <div class="card-header">
-                <div class="date-badge"></div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">أ.د.محمد لبيب سالم </h3>
-                <p class="card-desc">سيكون للزكاء الإصطناعي دور مهم جدا لمحاربه وعلاج ورم السرطان </p>
-                <a href="https://www.facebook.com/share/v/1E8sMNRzPX/?mibextid=wwXIfr" target="_blank" class="btn">
-                    <span>إضغط لمشاهده الخبر</span>
-                </a>
-            </div>
-        <div class="container">
-        <div class="card breaking-news">
-            <div class="card-header">
-                <div class="date-badge"></div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">تبادل الخبرات</h3>
-                <p class="card-desc">في المؤتمر الدولي السنوي للجمعيه المصريه لأبحاث السرطان |تبادل الخبرات بين بين شباب الباحثين والأثاتذه </p>
-                <a href="https://investor24.net/2025/09/10/%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%a7%d9%84%d8%af%d9%88%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d9%86%d9%88%d9%8a-%d9%84%d9%84%d8%ac%d9%85%d8%b9%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b5/" target="_blank" class="btn">
-                    <span>إضغط لمشاهده الخبر</span>
-                </a>
-            </div>
-        </div>
-            <div class="container">
-        <div class="card breaking-news">
-            <div class="card-header">
-                <div class="date-badge"></div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">تكريم</h3>
-                <p class="card-desc">تكريم الأطفال العلماء</p>
-                <a href="https://investor24.net/2025/09/11/%d9%85%d8%b9%d8%b1%d8%b6-%d9%81%d9%86%d9%8a-%d9%88%d8%aa%d9%83%d8%b1%d9%8a%d9%85-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d8%a7%d8%a1-%d8%b9%d9%84%d9%89-%d9%87%d8%a7/" target="_blank" class="btn">
-                    <span>إضغط لمشاهده الخبر</span>
-                </a>
-            </div>
-        </div>
-      
-      
-      
-      
-      
-      
-                  <div class="card-body">
-                <h3 class="card-title">جلسه علميه</h3>
-                <p class="card-desc">جلسه علميه عن بيلوجيا الإشعاع وإداره علاج السرطان بالمؤتمر</p>
-                <a href="https://investor24.net/2025/09/16/%d8%ac%d9%84%d8%b3%d8%a9-%d8%b9%d9%84%d9%85%d9%8a%d8%a9-%d9%85%d8%aa%d9%85%d9%8a%d8%b2%d8%a9-%d8%b9%d9%86-%d8%a8%d9%8a%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7-%d8%a7%d9%84%d8%a5%d8%b4%d8%b9%d8%a7%d8%b9/" target="_blank" class="btn">
-                    <span>إضغط لمشاهده الخبر</span>
-                </a>
-            </div>
-        </div>
+        </article>
         
-                          
-      
-      
-      
-      
-      
-      
-      
-      <div class="container">
-        <div class="card breaking-news">
+        <!-- الخبر الثاني -->
+        <article class="card">
             <div class="card-header">
-                <div class="date-badge"></div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
+                <div class="date-badge">10 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="الدكتور محمد لبيب سالم" class="card-image">
             </div>
             <div class="card-body">
-                <h3 class="card-title">الذكاء الإصطناعي</h3>
-                <p class="card-desc">كيف يساعد الذكاء الاصطناعي والتغير المناخي في أبحاث السرطان؟</p>
-                <a href="https://daralmaref.com/News/2339798.aspx" target="_blank" class="btn">
-                    <span>إضغط لمشاهده الخبر</span>
+                <h2 class="card-title">أ.د. محمد لبيب سالم</h2>
+                <p class="card-desc">سيكون للذكاء الاصطناعي دور مهم جدًا في محاربة وعلاج أورام السرطان وفقًا لأحدث الأبحاث.</p>
+                <a href="https://www.facebook.com/share/v/1E8sMNRzPX/?mibextid=wwXIfr" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
                 </a>
             </div>
-        </div>
-          
-      
-      
-      <div class="container">
-        <div class="card breaking-news">
-            <div class="card-header">
-                <div class="date-badge"></div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
-            </div>
-            <div class="card-body">
-                <h3 class="card-title">في المؤتمر |صور</h3>
-                <p class="card-desc">
-
-في المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان.. تبادل الخبرات بين شباب الباحثين والأساتذة| صور
-
-</p>
-                <a href="https://investor24.net/2025/09/10/%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%a7%d9%84%d8%af%d9%88%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d9%86%d9%88%d9%8a-%d9%84%d9%84%d8%ac%d9%85%d8%b9%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b5/" target="_blank" class="btn">
-                    <span>إضغط لمشاهده الخبر</span>
-                </a>
-            </div>
-        </div>
+        </article>
         
         
-     <div class="container">
-        <div class="card breaking-news">
+            <article class="card">
             <div class="card-header">
-                <div class="date-badge"></div>
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="أخبار عاجلة" class="card-image">
+                <div class="date-badge">10 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="الدكتور محمد لبيب سالم" class="card-image">
             </div>
             <div class="card-body">
-                <h3 class="card-title">إنعقاد المؤتمر</h3>
-                <p class="card-desc">
-انعقاد المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان بالتعاون مع "مدينة الأبحاث العلمية".. 8 سبتمبر</p>
-                <a href="https://gate.ahram.org.eg/News/5272337.aspx" target="_blank" class="btn">
-                    <span>إضغط لمشاهده الخبر</span>
+                <h2 class="card-title">مؤتمر دولي</h2>
+                <p class="card-desc">مؤتمر دولي في مدينه الابحاث العلميه</p>
+                <a href="https://www.vetogate.com/5495998" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
                 </a>
             </div>
-        </div>
+        </article>
+                    <article class="card">
+            <div class="card-header">
+                <div class="date-badge">10 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="الدكتور محمد لبيب سالم" class="card-image">
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">التعليم العالي </h2>
+                <p class="card-desc">مؤتمر في مدينه البحث العلمي</p>
+                <a href="https://elghad.news/262247/" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
+                </a>
+            </div>
+        </article>
+                    <article class="card">
+            <div class="card-header">
+                <div class="date-badge">10 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="الدكتور محمد لبيب سالم" class="card-image">
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">وزير التعليم العالي</h2>
+                <p class="card-desc">الدوله تدعم الابحاث التطبيقيه</p>
+                <a href="https://www.aldawlanews.com/1289814 https://www.msr2030.com/502068 https://www.mobtada.com/egypt/1545075/%D9%88%D8%B2%D9%8A%D8%B1-%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%8A-%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D9%8A%D8%A9-%D9%84%D9%85%D9%83%D8%A7%D9%81%D8%AD%D8%A9-%D8%A7%D9%84%D8%B3%D8%B1%D8%B7%D8%A7%D9%86-%D8%A3%D9%88%D9%84%D9%88%D9%8A%D8%A9-%D9%84%D9%84%D8%AF%D9%88%D9%84%D8%A9 https://www.elwatannews.com/news/details/8138771 https://www.dostor.org/5227108 https://www.elaosboa.com/2438944/ https://www.egynow.net/news/24010308/%D9%85%D8%A4%D8%AA%D9%85%D8%B1-%D8%AF%D9%88%D9%84%D9%8A-%D9%8A%D9%86%D8%A7%D9%82%D8%B4-%D8%A3%D8%AD%D8%AF%D8%AB-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D8%B1%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB- https://www.maspero.eg/science-and-technology/2025/09/21/891665/%D9%85%D8%A4%D8%AA%D9%85%D8%B1-%D8%AF%D9%88%D9%84%D9%8A-%D8%A8%D9%85%D8%AF%D9%8A%D9%86%D8%A9-%D8%A7%D9%84%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D8%A7%D9%84%D8%B9%D9%84%D9%85%D9%8A%D8%A9-%D9%8A%D9%86%D8%A7%D9%82%D8%B4-%D8%A3%D8%AD%D8%AF%D8%AB-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D8%B1%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D8%A7%D9%84%D8%B3%D8%B1%D8%B7%D8%A7%D9%86%C2%A0 https://ajil.news/%D9%85%D8%A4%D8%AA%D9%85%D8%B1-%D8%AF%D9%88%D9%84%D9%8A-%D9%8A%D9%86%D8%A7%D9%82%D8%B4-%D8%A3%D8%AD%D8%AF%D8%AB-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D8%B1%D8%A7%D8%AA-%D9%81%D9%8A-%D8%A3%D8%A8%D8%AD%D8%A7/news/" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
+                </a>
+            </div>
+        </article>
+        
+        <!-- الخبر الثالث -->
+        <article class="card">
+            <div class="card-header">
+                <div class="date-badge">10 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="تبادل الخبرات بين الباحثين" class="card-image">
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">تبادل الخبرات بين الأجيال</h2>
+                <p class="card-desc">في المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان: تبادل الخبرات بين شباب الباحثين والأساتذة.</p>
+                <a href="https://investor24.net/2025/09/10/%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%a7%d9%84%d8%af%d9%88%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d9%86%d9%88%d9%8a-%d9%84%d9%84%d8%ac%d9%86%d8%b9%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b5/" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
+                </a>
+            </div>
+        </article>
+        
+        <!-- الخبر الرابع -->
+        <article class="card">
+            <div class="card-header">
+                <div class="date-badge">11 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="تكريم الأطفال العلماء" class="card-image">
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">تكريم الأطفال العلماء</h2>
+                <p class="card-desc">معرض فني وتكريم الأطفال العلماء على هامش فعاليات المؤتمر الدولي لأبحاث السرطان.</p>
+                <a href="https://investor24.net/2025/09/11/%d9%85%d8%b9%d8%b1%d8%b6-%d9%81%d9%86%d9%8a-%d9%88%d8%aa%d9%87%d9%85%d9%8a%d9%85-%d8%a7%d9%84%d8%a3%d8%b7%d9%81%d8%a7%d9%84-%d8%a7%d9%84%d8%b9%d9%84%d9%85%d8%a7%d8%a1-%d8%b9%d9%84%d9%89-%d9%87%d8%a7/" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
+                </a>
+            </div>
+        </article>
+        
+        <!-- الخبر الخامس -->
+        <article class="card">
+            <div class="card-header">
+                <div class="date-badge">16 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="بيولوجيا الإشعاع وإدارة علاج السرطان" class="card-image">
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">بيولوجيا الإشعاع وإدارة العلاج</h2>
+                <p class="card-desc">جلسة علمية متميزة عن بيولوجيا الإشعاع وإدارة علاج السرطان في المؤتمر الدولي.</p>
+                <a href="https://investor24.net/2025/09/16/%d8%ac%d9%84%d8%b3%d8%a9-%d8%b9%d9%84%d9%85%d9%8a%d8%a9-%d9%85%d8%aa%d9%85%d9%8a%d8%b2%d8%a9-%d8%b9%d9%86-%d8%a8%d9%8a%d9%88%d9%84%d9%88%d8%ac%d9%8a%d8%a7-%d8%a7%d9%84%d8%a5%d8%b4%d8%b9%d8%a7%d8%b9/" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
+                </a>
+            </div>
+        </article>
+        
+        <!-- الخبر السادس -->
+        <article class="card breaking-news">
+            <div class="card-header">
+                <div class="date-badge">أحدث الأخبار</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="الذكاء الاصطناعي والتغير المناخي" class="card-image">
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">الذكاء الاصطناعي والتغير المناخي</h2>
+                <p class="card-desc">كيف يساعد الذكاء الاصطناعي والتغير المناخي في أبحاث السرطان؟ اكتشف العلاقة بين هذه المجالات.</p>
+                <a href="https://daralmaref.com/News/2339798.aspx" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
+                </a>
+            </div>
+        </article>
+        
+        <!-- الخبر السابع -->
+        <article class="card">
+            <div class="card-header">
+                <div class="date-badge">10 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="صور من المؤتمر" class="card-image">
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">صور من المؤتمر</h2>
+                <p class="card-desc">في المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان: تبادل الخبرات بين شباب الباحثين والأساتذة.</p>
+                <a href="https://investor24.net/2025/09/10/%d9%81%d9%8a-%d8%a7%d9%84%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%a7%d9%84%d8%af%d9%88%d9%84%d9%8a-%d8%a7%d9%84%d8%b3%d9%86%d9%8a%d9%88%d9%8a-%d9%84%d9%84%d8%ac%d9%86%d8%b9%d9%8a%d8%a9-%d8%a7%d9%84%d9%85%d8%b5/" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
+                </a>
+            </div>
+        </article>
+        
+        <!-- الخبر الثامن -->
+        <article class="card">
+            <div class="card-header">
+                <div class="date-badge">8 سبتمبر</div>
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgX9rhgPtuooaGs_nb76bjyyvT8xkUUuvkwbxG3YjZorCEXP1suduZp7b9Q3pv4qbaa3NwL5vnjVYRYxHGF7im6ABCwP-IL0wAHkyVTHBB2A0xoCMSDsNRDpKjmcmNnTw2DT8d7FQ0zvzXNr0XmOaX95M8uvmeKWGrNVtVvP6Z-0fjIxKIlDueLHkJrNB5g/s1150/1021.jpg" alt="انعقاد المؤتمر" class="card-image">
+            </div>
+            <div class="card-body">
+                <h2 class="card-title">انعقاد المؤتمر</h2>
+                <p class="card-desc">انعقاد المؤتمر الدولي السنوي للجمعية المصرية لأبحاث السرطان بالتعاون مع "مدينة الأبحاث العلمية".</p>
+                <a href="https://gate.ahram.org.eg/News/5272337.aspx" target="_blank" rel="noopener" class="btn">
+                    <i class="fas fa-newspaper"></i> اقرأ الخبر كاملًا
+                </a>
+            </div>
+        </article>
+    </main>
+    
+    <footer class="footer" id="footer">
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
            
-        
+        </div>
+        <p>جميع الحقوق محفوظة © الجمعية المصرية لأبحاث السرطان 2025</p>
+        <p>تصميم وتطوير فريق المؤتمر</p>
+    </footer>
+
     <script>
         // تأثير الكتابة للعنوان الرئيسي
         const title = document.querySelector('h1');
@@ -374,7 +942,123 @@
             }
         }
         
-        setTimeout(typeWriter, 500);
+        // زر العودة للأعلى
+        function setupBackToTop() {
+            const backToTopButton = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.classList.add('show');
+                } else {
+                    backToTopButton.classList.remove('show');
+                }
+                
+                // تحديث شريط التقدم
+                updateProgressBar();
+                
+                // تفعيل أنيميشن العناصر عند التمرير
+                animateOnScroll();
+            });
+            
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+        
+        // شريط التقدم
+        function updateProgressBar() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+        
+        // تحميل الصور بسلاسة
+        function loadImagesSmoothly() {
+            const images = document.querySelectorAll('.card-image');
+            
+            images.forEach(img => {
+                if (img.complete) {
+                    img.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', () => {
+                        img.classList.add('loaded');
+                    });
+                }
+            });
+        }
+        
+        // إخفاء شاشة التحميل
+        function hideLoader() {
+            const loader = document.getElementById('loader');
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                document.body.classList.add('loaded');
+                
+                // تفعيل أنيميشن العناصر بعد تحميل الصفحة
+                animateElements();
+            }, 1500);
+        }
+        
+        // أنيميشن للعناصر عند التحميل
+        function animateElements() {
+            const header = document.getElementById('header');
+            const breadcrumb = document.getElementById('breadcrumb');
+            const cards = document.querySelectorAll('.card');
+            const footer = document.getElementById('footer');
+            
+            header.classList.add('animate');
+            breadcrumb.classList.add('animate');
+            
+            // أنيميشن للبطاقات بشكل متتالي
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('animate');
+                }, 200 + (index * 100));
+            });
+            
+            footer.classList.add('animate');
+        }
+        
+        // أنيميشن عند التمرير
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.card, .header, .footer');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const position = element.getBoundingClientRect().top;
+                
+                if (position < windowHeight - 100) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+        
+        // تهيئة جميع الوظائف عند تحميل الصفحة
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(typeWriter, 500);
+            setupBackToTop();
+            loadImagesSmoothly();
+            hideLoader();
+            
+            // إضافة مستمع للتمرير لتفعيل الأنيميشن
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // تفعيل الأنيميشن فوراً للعناصر المرئية
+            setTimeout(animateOnScroll, 100);
+        });
+        
+        // تحسين تجربة المستخدم للروابط الخارجية
+        document.querySelectorAll('a[target="_blank"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const confirm = window.confirm('أنت على وشك الإنتقال من الموقع، هل تريد متابعة؟');
+                if (confirm) {
+                    window.open(this.href, '_blank');
+                }
+            });
+        });
     </script>
 </body>
 </html>
